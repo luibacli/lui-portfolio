@@ -6,7 +6,7 @@
         <div
             class="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row"
         >
-            <div class="flex flex-col justify-center h-full">
+            <div class="flex flex-col justify-center h-full animate-fade-left">
                 <h2 class="text-4xl sm:text-7xl font-bold text-white">
                     I'm a Vue.js Developer
                 </h2>
@@ -36,11 +36,11 @@
                     </svg>
                 </div>
             </div>
-            <div>
+            <div class="animate-fade-right">
                 <img
                     :src="`${HeroImage}`"
                     alt="my profile"
-                    class="rounded-2xl mx-auto w-2/3 md:w-full"
+                    class="rounded-2xl mx-auto w-2/3 md:w-full hover:animate-wiggle animate-ease-in-out"
                 />
             </div>
         </div>

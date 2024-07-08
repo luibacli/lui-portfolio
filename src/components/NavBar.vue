@@ -5,6 +5,7 @@
         <div>
             <h1 class="text-5xl font-signature ml-2">Luigie Bacli</h1>
         </div>
+
         <div
             class="flex px-4 py-6 text-4 space-x-10 hidden md:flex cursor-pointer text-gray-500"
         >
@@ -93,15 +94,6 @@ const scrollToSectionMenu = (sectionId) => {
     }
     showNav.value = false;
 };
-
-// function openMenu() {
-//     if (!showNav) {
-//         return (showNav.value = true);
-//         console.log(showNav.value);
-//     } else {
-//         return (showNav.value = false);
-//     }
-// }
 
 watch(showNav, (oldval, newval) => {
     if (oldval !== newval) {

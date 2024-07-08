@@ -50,9 +50,7 @@
 <script setup>
 import githubFinder from "../assets/portfolio/githubFinder.png";
 import houseMarketplace from "../assets/portfolio/houseMarketplace.png";
-import supportDesk from "../assets/portfolio/supportDesk.png";
-import travelAdvisor from "../assets/portfolio/travelAdvisor.png";
-import todo from "../assets/portfolio/todo.png";
+
 import bankist from "../assets/portfolio/bankist.png";
 import ematch from "../assets/portfolio/ematch.png";
 import ematchDashboard from "../assets/portfolio/ematchDashboard.png";
@@ -62,13 +60,13 @@ const portfolios = [
     {
         id: 1,
         src: ematch,
-        demo: "https://support-desk-luibacli.herokuapp.com/",
+        demo: "https://e-match.vercel.app/#/",
         code: "https://github.com/luibacli/e-match",
     },
     {
         id: 2,
         src: ematchDashboard,
-        demo: "https://house-marketplace-reac-tw-firebase.vercel.app/",
+        demo: "https://ematch-dashboard.vercel.app/",
         code: "https://github.com/luibacli/ematch-dashboard",
     },
     {

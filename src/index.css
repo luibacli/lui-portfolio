@@ -10,4 +10,22 @@
     html {
         font-family: "Raleway", sans-serif;
     }
+    .animation1 {
+        -webkit-animation: fadeInRight 1s ease-in 800ms both;
+        animation: fadeInRight 1s ease-in 800ms both;
+    }
+}
+
+@layer utilities {
+    .animation1 {
+        -webkit-animation: fadeInRight 1s ease-in 800ms both;
+        animation: fadeInRight 1s ease-in 800ms both;
+    }
+}
+
+@layer components {
+    .animation1 {
+        -webkit-animation: fadeInRight 1s ease-in 800ms both;
+        animation: fadeInRight 1s ease-in 800ms both;
+    }
 }
