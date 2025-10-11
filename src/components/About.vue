@@ -2,11 +2,13 @@
     <div
         id="about"
         class="w-full h-fit bg-gradient-to-b from-gray-800 to-black text-white"
+        
     >
         <div
             class="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-screen h-fit"
+            data-aos="fade-up" data-aos-duration="1500"
         >
-            <div class="pb-8">
+            <div>
                 <p class="text-4xl font-bold inline border-b-4 border-gray-500">
                     About
                 </p>
@@ -26,6 +28,13 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import 'aos/dist/aos.css'
+import AOS from 'aos'
+
+AOS.init()
+
+</script>
+
 
 <style lang="scss" scoped></style>
