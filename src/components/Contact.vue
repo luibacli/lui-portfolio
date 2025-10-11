@@ -5,6 +5,7 @@
     >
         <div
             class="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full"
+            data-aos="fade-left" data-aos-duration="1500"
         >
             <div class="pb-8">
                 <p class="text-4xl font-bold inline border-b-4 border-gray-500">
@@ -50,6 +51,11 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import 'aos/dist/aos.css'
+import AOS from 'aos'
+
+AOS.init()
+</script>
 
 <style lang="scss" scoped></style>

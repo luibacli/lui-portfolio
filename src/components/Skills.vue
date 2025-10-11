@@ -5,6 +5,7 @@
     >
         <div
             class="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white"
+            data-aos="fade-up" data-aos-duration="1500"
         >
             <div>
                 <p
@@ -51,6 +52,12 @@ import docker from "../assets/docker.png";
 import git from "../assets/git.png";
 import pinia from "../assets/pinia.png";
 import prisma from "../assets/prisma.png";
+
+
+import 'aos/dist/aos.css'
+import AOS from 'aos'
+
+AOS.init()
 
 const techs = [
     {

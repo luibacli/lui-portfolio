@@ -14,7 +14,7 @@
                 </p>
             </div>
             <p class="text-xl mt-20">
-                A full-stack web developer passionate about crafting clean, efficient, and scalable web applications. With almost three years of experience building real-world projects, I specialize in Vue.js, Node.js, Express, and MongoDB, blending front-end precision with back-end logic to create seamless digital experiences.
+                A full-stack web developer passionate about crafting clean, efficient, and scalable web applications. With four (4) years of experience building real-world projects, I specialize in Vue.js, Node.js, Express, and MongoDB, blending front-end precision with back-end logic to create seamless digital experiences.
             </p>
             <br />
             <p class="text-xl">

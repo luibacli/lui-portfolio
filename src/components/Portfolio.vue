@@ -5,6 +5,7 @@
     >
         <div
             class="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full"
+            data-aos="fade-up" data-aos-duration="1500"
         >
             <div class="pb-8">
                 <p class="text-4xl font-bold inline border-b-4 border-gray-500">
@@ -55,6 +56,11 @@ import bankist from "../assets/portfolio/bankist.png";
 import ematch from "../assets/portfolio/ematch.png";
 import ematchDashboard from "../assets/portfolio/ematchDashboard.png";
 import twitterClone from "../assets/portfolio/twitterClone.png";
+
+import 'aos/dist/aos.css'
+import AOS from 'aos'
+
+AOS.init()
 
 const portfolios = [
     {
