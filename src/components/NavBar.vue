@@ -1,6 +1,7 @@
 <template>
     <div
         class="flex flex-row justify-between top-0 left-0 items-center w-full h-20 px-4 text-white bg-black fixed"
+        style="position: sticky;"
     >
         <div>
             <h1 class="text-5xl font-signature ml-2">Luigie Bacli</h1>

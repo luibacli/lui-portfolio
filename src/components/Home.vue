@@ -8,12 +8,10 @@
         >
             <div class="flex flex-col justify-center h-full animate-fade-left">
                 <h2 class="text-4xl sm:text-7xl font-bold text-white">
-                    I'm a Vue.js Developer
+                    Full-Stack Developer
                 </h2>
                 <p class="text-gray-500 py-4 max-w-md">
-                    Dynamic and detail-oriented Vue.js Developer with almost
-                    three years of hands-on experience in designing, developing,
-                    and maintaining web applications.
+                    — crafting fast, elegant, and scalable web apps with Vue.js, Node.js, and REST API.
                 </p>
                 <div
                     @click="scrollToSection('portfolio')"
@@ -38,9 +36,13 @@
             </div>
             <div class="animate-fade-right">
                 <img
-                    :src="`${HeroImage}`"
+                    :src="`${HeroImage1}`"
                     alt="my profile"
-                    class="rounded-2xl mx-auto w-2/3 md:w-full hover:animate-wiggle animate-ease-in-out"
+                    class="rounded-2xl mx-auto w-2/3 md:w-full sm:w-full hover:animate-wiggle animate-ease-in-out"
+                   
+
+                    
+                   
                 />
             </div>
         </div>
@@ -48,7 +50,8 @@
 </template>
 
 <script setup>
-import HeroImage from "../assets/heroImage.png";
+import HeroImage from "../assets/heroImage.jpg";
+import HeroImage1 from "../assets/heroImage.png"
 
 const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);

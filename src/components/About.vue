@@ -12,28 +12,15 @@
                 </p>
             </div>
             <p class="text-xl mt-20">
-                As a dedicated Front End Developer with almost three years of
-                experience, I specialize in crafting dynamic and user-friendly
-                web applications using Vue.js. My expertise lies primarily in
-                Vue 3, where I leverage the power of JavaScript and TypeScript
-                to build robust and scalable applications.
+                A full-stack web developer passionate about crafting clean, efficient, and scalable web applications. With almost three years of experience building real-world projects, I specialize in Vue.js, Node.js, Express, and MongoDB, blending front-end precision with back-end logic to create seamless digital experiences.
             </p>
             <br />
             <p class="text-xl">
-                I have a solid foundation in integrating back-end services and
-                managing databases, with practical experience using Prisma,
-                MongoDB, and Firebase. My proficiency extends to UI frameworks
-                and design systems, particularly Quasar and Tailwind CSS,
-                ensuring the creation of visually appealing and highly
-                responsive user interfaces.
+                I love transforming ideas into interactive interfaces—using Tailwind CSS, PrimeVue, and modern JavaScript frameworks to deliver fast, responsive designs that look and feel right on any device. On the back end, I design REST APIs, automate workflows, and manage data systems that keep things running smoothly behind the scenes.
             </p>
             <br />
             <p class="text-xl">
-                Collaboration and version control are second nature to me, with
-                Git being an essential part of my workflow. I thrive in
-                fast-paced environments, continuously improving my skills and
-                staying updated with the latest industry trends and
-                technologies.
+                My approach combines creativity and structure—every project starts with understanding the problem deeply, then building solutions that are both functional and visually engaging. Whether it’s a dashboard, a full-stack platform, or a small tool with big impact, I’m all about creating things that work beautifully and perform flawlessly.
             </p>
         </div>
     </div>
