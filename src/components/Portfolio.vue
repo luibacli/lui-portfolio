@@ -5,24 +5,25 @@
     >
         <div
             class="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full"
-            data-aos="fade-up" data-aos-duration="1500"
+            data-aos="fade-up" data-aos-duration="600"
         >
             <div class="pb-8">
-                <p class="text-4xl font-bold inline border-b-4 border-gray-500">
-                    Portfolio
-                </p>
+                <div class="w-fit">
+                    <p class="text-4xl font-bold text-white">Portfolio</p>
+                    <div class="h-1 bg-gray-500 heading-line"></div>
+                </div>
                 <p class="py-6 text-gray-400">A selection of projects I've built and shipped:</p>
             </div>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-0">
                 <div
-                    class="shadow-md shadow-gray-600 rounded-lg overflow-hidden flex flex-col bg-gray-900"
+                    class="shadow-md shadow-gray-600 rounded-lg overflow-hidden flex flex-col bg-gray-900 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-900/20"
                     v-for="portfolio in portfolios"
                     :key="portfolio.id"
                 >
                     <div class="overflow-hidden">
                         <img
                             :src="portfolio.src"
-                            class="w-full duration-300 hover:scale-105"
+                            class="w-full transition duration-300 hover:scale-105"
                             :alt="portfolio.name"
                         />
                     </div>
@@ -111,4 +112,13 @@ const portfolios = [
 ];
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.heading-line {
+  transform-origin: left;
+  animation: lineReveal 400ms ease-out 600ms both;
+}
+@keyframes lineReveal {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+</style>

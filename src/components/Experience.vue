@@ -3,15 +3,12 @@
         id="experience"
         class="bg-gradient-to-b from-black to-gray-800 w-full h-fit text-white"
     >
-        <div
-            class="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full py-12"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-        >
-            <div class="pb-10">
-                <p class="text-4xl font-bold inline border-b-4 border-gray-500">
-                    Experience
-                </p>
+        <div class="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full py-12">
+            <div class="pb-10" data-aos="fade-up" data-aos-duration="600">
+                <div class="w-fit">
+                    <p class="text-4xl font-bold text-white">Experience</p>
+                    <div class="h-1 bg-gray-500 heading-line"></div>
+                </div>
                 <p class="py-6 text-gray-400">Where I've shipped real work:</p>
             </div>
 
@@ -19,10 +16,13 @@
                 <div
                     v-for="(exp, index) in experiences"
                     :key="exp.id"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    :data-aos-delay="index * 150"
                     class="flex gap-6"
                 >
                     <div class="flex flex-col items-center">
-                        <div class="w-3 h-3 rounded-full bg-cyan-400 mt-1 flex-shrink-0"></div>
+                        <div :class="['w-3 h-3 rounded-full bg-cyan-400 mt-1 flex-shrink-0', index === 0 ? 'dot-active' : '']"></div>
                         <div
                             v-if="index < experiences.length - 1"
                             class="w-px bg-gray-700 flex-1 mt-2"
@@ -95,4 +95,29 @@ const experiences = [
 ];
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.heading-line {
+  transform-origin: left;
+  animation: lineReveal 400ms ease-out 600ms both;
+}
+@keyframes lineReveal {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.dot-active {
+  position: relative;
+}
+.dot-active::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid rgb(34, 211, 238);
+  animation: pulseRing 1600ms ease-out infinite;
+}
+@keyframes pulseRing {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(2.5); opacity: 0;   }
+}
+</style>

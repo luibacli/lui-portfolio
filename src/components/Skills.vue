@@ -5,17 +5,14 @@
     >
         <div
             class="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white"
-            data-aos="fade-up" data-aos-duration="1500"
+            data-aos="fade-up" data-aos-duration="600"
         >
             <div>
-                <p
-                    class="text-4xl font-bold border-b-4 border-gray-500 p-2 inline"
-                >
-                    Skills
-                </p>
-                <p class="py-6">
-                    These are the technologies that I've worked with:
-                </p>
+                <div class="w-fit">
+                    <p class="text-4xl font-bold text-white">Skills</p>
+                    <div class="h-1 bg-gray-500 heading-line"></div>
+                </div>
+                <p class="py-6 text-gray-400">My primary stack — what I ship with daily:</p>
             </div>
 
             <div
@@ -24,7 +21,7 @@
                 <div
                     v-for="tech in techs"
                     :key="tech.id"
-                    :class="`shadow-md hover:scale-105 duration-500 py-4 rounded-lg ${tech.style}`"
+                    :class="`shadow-md transition duration-200 hover:scale-105 hover:-translate-y-1 py-4 rounded-lg ${tech.style}`"
                 >
                     <img :src="tech.src" class="w-16 mx-auto" />
                     <p class="text-gray-300 text-sm mt-2 font-medium">{{ tech.title }}</p>
@@ -168,4 +165,13 @@ const techs = [
 ];
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.heading-line {
+  transform-origin: left;
+  animation: lineReveal 400ms ease-out 600ms both;
+}
+@keyframes lineReveal {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+</style>

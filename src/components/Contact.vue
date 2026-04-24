@@ -5,12 +5,13 @@
     >
         <div
             class="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full"
-            data-aos="fade-left" data-aos-duration="1500"
+            data-aos="fade-up" data-aos-duration="600"
         >
             <div class="pb-8">
-                <p class="text-4xl font-bold inline border-b-4 border-gray-500">
-                    Contact
-                </p>
+                <div class="w-fit">
+                    <p class="text-4xl font-bold text-white">Contact</p>
+                    <div class="h-1 bg-gray-500 heading-line"></div>
+                </div>
                 <p class="py-6 text-gray-400">
                     Open to remote opportunities. Fill out the form and I'll get back to you within 24 hours.
                 </p>
@@ -26,19 +27,19 @@
                         type="text"
                         name="name"
                         placeholder="Your name"
-                        class="p-3 bg-transparent border-2 border-gray-600 rounded-md text-white focus:outline-none focus:border-cyan-400 duration-200"
+                        class="p-3 bg-transparent border-2 border-gray-600 rounded-md text-white focus:outline-none focus:border-cyan-400 transition duration-200"
                     />
                     <input
                         type="email"
                         name="email"
                         placeholder="Your email"
-                        class="my-4 p-3 bg-transparent border-2 border-gray-600 rounded-md text-white focus:outline-none focus:border-cyan-400 duration-200"
+                        class="my-4 p-3 bg-transparent border-2 border-gray-600 rounded-md text-white focus:outline-none focus:border-cyan-400 transition duration-200"
                     />
                     <textarea
                         name="message"
                         placeholder="Tell me about the role or project..."
                         rows="8"
-                        class="p-3 bg-transparent border-2 border-gray-600 rounded-md text-white focus:outline-none focus:border-cyan-400 duration-200"
+                        class="p-3 bg-transparent border-2 border-gray-600 rounded-md text-white focus:outline-none focus:border-cyan-400 transition duration-200"
                     ></textarea>
                     <button
                         type="submit"
@@ -55,4 +56,13 @@
 <script setup>
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.heading-line {
+  transform-origin: left;
+  animation: lineReveal 400ms ease-out 600ms both;
+}
+@keyframes lineReveal {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+</style>

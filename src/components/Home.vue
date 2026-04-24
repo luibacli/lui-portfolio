@@ -6,27 +6,27 @@
         <div
             class="max-w-screen-lg mx-auto flex flex-col items-center justify-center px-4 md:flex-row gap-8 py-16"
         >
-            <div class="flex flex-col justify-center animate-fade-left">
-                <p class="text-cyan-400 text-lg font-medium mb-2 tracking-widest uppercase">
+            <div class="flex flex-col justify-center">
+                <p class="text-cyan-400 text-lg font-medium mb-2 tracking-widest uppercase fade-in-up" style="animation-delay:0ms">
                     Hi, I'm
                 </p>
-                <h1 class="text-5xl sm:text-7xl font-bold text-white">
+                <h1 class="text-5xl sm:text-7xl font-bold text-white fade-in-up" style="animation-delay:100ms">
                     Luigie Bacli
                 </h1>
-                <h2 class="text-2xl sm:text-4xl font-semibold text-gray-300 mt-2">
+                <h2 class="text-2xl sm:text-4xl font-semibold text-gray-300 mt-2 fade-in-up" style="animation-delay:200ms">
                     Full-Stack Developer
                 </h2>
-                <p class="text-gray-400 py-4 max-w-md text-lg leading-relaxed">
+                <p class="text-gray-400 py-4 max-w-md text-lg leading-relaxed fade-in-up" style="animation-delay:320ms">
                     4 years building production-grade web apps with Vue.js, Node.js, and REST APIs — from pixel-perfect UIs to scalable back-end systems.
                 </p>
-                <p class="text-gray-500 text-sm mb-2">
+                <p class="text-gray-500 text-sm mb-2 fade-in-up" style="animation-delay:380ms">
                     📍 Cebu, PH &nbsp;·&nbsp; UTC+8 &nbsp;·&nbsp;
                     <span class="text-green-400 font-medium">Open to remote</span>
                 </p>
-                <div class="flex gap-4 flex-wrap">
+                <div class="flex gap-4 flex-wrap fade-in-up" style="animation-delay:440ms">
                     <div
                         @click="scrollToSection('portfolio')"
-                        class="group text-white w-fit px-6 py-3 my-2 flex items-center gap-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer hover:scale-105 duration-200"
+                        class="group text-white w-fit px-6 py-3 my-2 flex items-center gap-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer transition duration-200 hover:scale-105 hover:shadow-[0_0_16px_rgba(6,182,212,0.35)]"
                     >
                         View My Work
                         <svg
@@ -46,13 +46,13 @@
                     </div>
                     <div
                         @click="scrollToSection('contact')"
-                        class="text-white w-fit px-6 py-3 my-2 flex items-center gap-2 rounded-md border border-gray-600 cursor-pointer hover:border-cyan-400 hover:text-cyan-400 duration-200"
+                        class="text-white w-fit px-6 py-3 my-2 flex items-center gap-2 rounded-md border border-gray-600 cursor-pointer transition duration-200 hover:border-cyan-400 hover:text-cyan-400"
                     >
                         Contact Me
                     </div>
                 </div>
             </div>
-            <div class="animate-fade-right flex-shrink-0">
+            <div class="flex-shrink-0 fade-in-up" style="animation-delay:200ms">
                 <img
                     :src="`${HeroImage1}`"
                     alt="Luigie Bacli"
@@ -74,4 +74,18 @@ const scrollToSection = (sectionId) => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.fade-in-up {
+  animation: fadeInUp 500ms ease-out both;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
