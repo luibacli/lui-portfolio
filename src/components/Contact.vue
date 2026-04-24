@@ -4,7 +4,7 @@
         class="w-full h-fit bg-gradient-to-b from-black to-gray-800 text-white"
     >
         <div
-            class="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full"
+            class="flex flex-col px-4 py-12 justify-center max-w-screen-lg mx-auto h-full"
             data-aos="fade-up" data-aos-duration="600"
         >
             <div class="pb-8">
@@ -43,7 +43,7 @@
                     ></textarea>
                     <button
                         type="submit"
-                        class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-105 duration-200 font-medium"
+                        class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md transition duration-200 hover:scale-105 font-medium"
                     >
                         Send Message
                     </button>

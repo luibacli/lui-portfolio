@@ -1,9 +1,10 @@
 <template>
     <div
         id="experience"
+        ref="sectionRef"
         class="bg-gradient-to-b from-black to-gray-800 w-full h-fit text-white"
     >
-        <div class="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full py-12">
+        <div class="max-w-screen-lg px-4 py-12 mx-auto flex flex-col justify-center w-full">
             <div class="pb-10" data-aos="fade-up" data-aos-duration="600">
                 <div class="w-fit">
                     <p class="text-4xl font-bold text-white">Experience</p>
@@ -26,6 +27,11 @@
                         <div
                             v-if="index < experiences.length - 1"
                             class="w-px bg-gray-700 flex-1 mt-2"
+                            :style="{
+                                transformOrigin: 'top',
+                                transform: linesVisible ? 'scaleY(1)' : 'scaleY(0)',
+                                transition: `transform 600ms ease-out ${(index + 1) * 150}ms`
+                            }"
                         ></div>
                     </div>
 
@@ -57,6 +63,24 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from 'vue';
+
+const sectionRef = ref(null);
+const linesVisible = ref(false);
+
+onMounted(() => {
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                linesVisible.value = true;
+                observer.disconnect();
+            }
+        },
+        { threshold: 0.15 }
+    );
+    if (sectionRef.value) observer.observe(sectionRef.value);
+});
+
 const experiences = [
     {
         id: 1,

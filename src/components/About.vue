@@ -5,14 +5,14 @@
         
     >
         <div
-            class="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-screen h-fit"
+            class="max-w-screen-lg px-4 py-12 mx-auto flex flex-col justify-center w-full h-fit"
             data-aos="fade-up" data-aos-duration="600"
         >
             <div class="w-fit">
                 <p class="text-4xl font-bold text-white">About</p>
                 <div class="h-1 bg-gray-500 heading-line"></div>
             </div>
-            <p class="text-xl mt-20 leading-relaxed">
+            <p class="text-xl mt-8 sm:mt-14 leading-relaxed">
                 I’m a full-stack developer with <span class="text-cyan-400 font-semibold">4 years of hands-on experience</span> shipping real products — from solo projects to collaborative platforms. I specialize in <span class="text-cyan-400 font-semibold">Vue.js, Node.js, Express, and MongoDB</span>, and I care deeply about code that is readable, maintainable, and fast.
             </p>
             <br />

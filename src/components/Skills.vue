@@ -4,10 +4,9 @@
         class="bg-gradient-to-b from-gray-800 to-black w-full h-fit"
     >
         <div
-            class="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white"
-            data-aos="fade-up" data-aos-duration="600"
+            class="max-w-screen-lg mx-auto px-4 py-12 flex flex-col justify-center w-full h-full text-white"
         >
-            <div>
+            <div data-aos="fade-up" data-aos-duration="600">
                 <div class="w-fit">
                     <p class="text-4xl font-bold text-white">Skills</p>
                     <div class="h-1 bg-gray-500 heading-line"></div>
@@ -19,8 +18,11 @@
                 class="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 sm:px-0"
             >
                 <div
-                    v-for="tech in techs"
+                    v-for="(tech, index) in techs"
                     :key="tech.id"
+                    data-aos="fade-up"
+                    data-aos-duration="350"
+                    :data-aos-delay="(index % 3) * 80 + Math.floor(index / 3) * 100"
                     :class="`shadow-md transition duration-200 hover:scale-105 hover:-translate-y-1 py-4 rounded-lg ${tech.style}`"
                 >
                     <img :src="tech.src" class="w-16 mx-auto" />
