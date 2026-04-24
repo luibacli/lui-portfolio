@@ -13,27 +13,22 @@
                     About
                 </p>
             </div>
-            <p class="text-xl mt-20">
-                A full-stack web developer passionate about crafting clean, efficient, and scalable web applications. With four (4) years of experience building real-world projects, I specialize in Vue.js, Node.js, Express, and MongoDB, blending front-end precision with back-end logic to create seamless digital experiences.
+            <p class="text-xl mt-20 leading-relaxed">
+                I’m a full-stack developer with <span class="text-cyan-400 font-semibold">4 years of hands-on experience</span> shipping real products — from solo projects to collaborative platforms. I specialize in <span class="text-cyan-400 font-semibold">Vue.js, Node.js, Express, and MongoDB</span>, and I care deeply about code that is readable, maintainable, and fast.
             </p>
             <br />
-            <p class="text-xl">
-                I love transforming ideas into interactive interfaces—using Tailwind CSS, PrimeVue, and modern JavaScript frameworks to deliver fast, responsive designs that look and feel right on any device. On the back end, I design REST APIs, automate workflows, and manage data systems that keep things running smoothly behind the scenes.
+            <p class="text-xl leading-relaxed">
+                On the front end, I build interfaces that are both visually sharp and intuitive — using Tailwind CSS, PrimeVue, and Quasar. On the back end, I design REST APIs, handle authentication, automate workflows, and manage databases. I’m comfortable owning an entire feature from database schema to deployed UI.
             </p>
             <br />
-            <p class="text-xl">
-                My approach combines creativity and structure—every project starts with understanding the problem deeply, then building solutions that are both functional and visually engaging. Whether it’s a dashboard, a full-stack platform, or a small tool with big impact, I’m all about creating things that work beautifully and perform flawlessly.
+            <p class="text-xl leading-relaxed">
+                I’m looking for a <span class="text-cyan-400 font-semibold">remote full-stack role</span> where I can build things that matter, ship fast, and keep growing. If you’re looking for a developer who takes ownership and doesn’t need hand-holding — let’s talk.
             </p>
         </div>
     </div>
 </template>
 
 <script setup>
-import 'aos/dist/aos.css'
-import AOS from 'aos'
-
-AOS.init()
-
 </script>
 
 

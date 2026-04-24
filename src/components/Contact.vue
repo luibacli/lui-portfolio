@@ -11,8 +11,8 @@
                 <p class="text-4xl font-bold inline border-b-4 border-gray-500">
                     Contact
                 </p>
-                <p class="py-6">
-                    Submit the form below to get in touch with me
+                <p class="py-6 text-gray-400">
+                    Open to remote opportunities. Fill out the form and I'll get back to you within 24 hours.
                 </p>
             </div>
 
@@ -25,25 +25,26 @@
                     <input
                         type="text"
                         name="name"
-                        placeholder="Enter your name"
-                        className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                        placeholder="Your name"
+                        class="p-3 bg-transparent border-2 border-gray-600 rounded-md text-white focus:outline-none focus:border-cyan-400 duration-200"
                     />
                     <input
-                        type="text"
+                        type="email"
                         name="email"
-                        placeholder="Enter your email"
-                        class="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                        placeholder="Your email"
+                        class="my-4 p-3 bg-transparent border-2 border-gray-600 rounded-md text-white focus:outline-none focus:border-cyan-400 duration-200"
                     />
                     <textarea
                         name="message"
-                        placeholder="Enter your message"
-                        rows="10"
-                        class="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                        placeholder="Tell me about the role or project..."
+                        rows="8"
+                        class="p-3 bg-transparent border-2 border-gray-600 rounded-md text-white focus:outline-none focus:border-cyan-400 duration-200"
                     ></textarea>
                     <button
-                        class="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+                        type="submit"
+                        class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-105 duration-200 font-medium"
                     >
-                        Let's talk
+                        Send Message
                     </button>
                 </form>
             </div>
@@ -52,10 +53,6 @@
 </template>
 
 <script setup>
-import 'aos/dist/aos.css'
-import AOS from 'aos'
-
-AOS.init()
 </script>
 
 <style lang="scss" scoped></style>

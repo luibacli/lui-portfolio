@@ -2,12 +2,15 @@
 import NavBar from "./components/NavBar.vue";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
+import Experience from "./components/Experience.vue";
 import Portfolio from "./components/Portfolio.vue";
 import Skills from "./components/Skills.vue";
 import Contact from "./components/Contact.vue";
 import LoadingBounce from "./components/LoadingBounce.vue";
 import SocialLinks from "./components/SocialLinks.vue";
 import { onMounted, ref } from "vue";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const loading = ref(false);
 const showNavBar = ref(false);
@@ -23,6 +26,7 @@ function showLoading() {
 
 onMounted(() => {
     showLoading();
+    AOS.init({ once: true });
 });
 </script>
 
@@ -38,6 +42,7 @@ onMounted(() => {
             <SocialLinks />
             <Home />
             <About />
+            <Experience />
             <Portfolio />
             <Skills />
             <Contact />

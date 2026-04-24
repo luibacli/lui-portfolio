@@ -8,16 +8,17 @@
         </div>
 
         <div
-            class="flex px-4 py-6 text-4 space-x-10 hidden md:flex cursor-pointer text-gray-500"
+            class="flex px-4 py-6 text-4 space-x-10 hidden md:flex cursor-pointer text-gray-300"
         >
-            <div @click="scrollToSection('home')">Home</div>
-            <div @click="scrollToSection('about')">About</div>
-            <div @click="scrollToSection('portfolio')">Portfolio</div>
-            <div @click="scrollToSection('skills')">Skills</div>
-            <div @click="scrollToSection('contact')">Contact</div>
+            <div @click="scrollToSection('home')" class="hover:text-cyan-400 duration-200">Home</div>
+            <div @click="scrollToSection('about')" class="hover:text-cyan-400 duration-200">About</div>
+            <div @click="scrollToSection('experience')" class="hover:text-cyan-400 duration-200">Experience</div>
+            <div @click="scrollToSection('portfolio')" class="hover:text-cyan-400 duration-200">Portfolio</div>
+            <div @click="scrollToSection('skills')" class="hover:text-cyan-400 duration-200">Skills</div>
+            <div @click="scrollToSection('contact')" class="hover:text-cyan-400 duration-200">Contact</div>
         </div>
         <div
-            class="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
+            class="cursor-pointer pr-4 z-10 text-gray-300 md:hidden"
             @click="showNav = true"
         >
             <svg
@@ -37,10 +38,10 @@
         </div>
         <div
             v-show="showNav"
-            class="flex flex-col justify-center items-center absolute top-0 left-0 w-screen h-fit bg-gradient-to-b from-black to-gray-800 text-gray-500"
+            class="flex flex-col justify-center items-center absolute top-0 left-0 w-screen h-fit bg-gradient-to-b from-black to-gray-800 text-gray-300"
         >
-            <button @click="showNav = false">
-                <span class="text-bold">X</span>
+            <button @click="showNav = false" class="text-gray-400 hover:text-white text-2xl font-bold py-4">
+                ✕
             </button>
 
             <ul v-for="link in links" :key="link.id">
@@ -56,30 +57,16 @@
 </template>
 
 <script setup>
-import { ref, defineOptions, watch } from "vue";
+import { ref } from "vue";
 const showNav = ref(false);
 
 const links = [
-    {
-        id: 1,
-        link: "home",
-    },
-    {
-        id: 2,
-        link: "about",
-    },
-    {
-        id: 3,
-        link: "portfolio",
-    },
-    {
-        id: 4,
-        link: "skills",
-    },
-    {
-        id: 5,
-        link: "contact",
-    },
+    { id: 1, link: "home" },
+    { id: 2, link: "about" },
+    { id: 3, link: "experience" },
+    { id: 4, link: "portfolio" },
+    { id: 5, link: "skills" },
+    { id: 6, link: "contact" },
 ];
 
 const scrollToSection = (sectionId) => {
@@ -95,13 +82,6 @@ const scrollToSectionMenu = (sectionId) => {
     }
     showNav.value = false;
 };
-
-watch(showNav, (oldval, newval) => {
-    if (oldval !== newval) {
-        showNav;
-        console.log(showNav.value);
-    }
-});
 </script>
 
 <style lang="scss" scoped></style>

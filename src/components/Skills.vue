@@ -19,14 +19,15 @@
             </div>
 
             <div
-                class="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0"
+                class="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 sm:px-0"
             >
                 <div
                     v-for="tech in techs"
                     :key="tech.id"
-                    :class="`shadow-md hover:scale-105 duration-500 py-2 rounded-l ${tech.style}`"
+                    :class="`shadow-md hover:scale-105 duration-500 py-4 rounded-lg ${tech.style}`"
                 >
-                    <img :src="tech.src" class="w-20 mx-auto" />
+                    <img :src="tech.src" class="w-16 mx-auto" />
+                    <p class="text-gray-300 text-sm mt-2 font-medium">{{ tech.title }}</p>
                 </div>
             </div>
         </div>
@@ -53,11 +54,6 @@ import git from "../assets/git.png";
 import pinia from "../assets/pinia.png";
 import prisma from "../assets/prisma.png";
 
-
-import 'aos/dist/aos.css'
-import AOS from 'aos'
-
-AOS.init()
 
 const techs = [
     {
@@ -87,7 +83,7 @@ const techs = [
     {
         id: 5,
         src: quasar,
-        title: "CSS",
+        title: "Quasar",
         style: "shadow-blue-500",
     },
     {

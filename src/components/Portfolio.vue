@@ -11,36 +11,38 @@
                 <p class="text-4xl font-bold inline border-b-4 border-gray-500">
                     Portfolio
                 </p>
-                <p class="py-6">Check out some of my works right here:</p>
+                <p class="py-6 text-gray-400">A selection of projects I've built and shipped:</p>
             </div>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-0">
                 <div
-                    class="shadow-md shadow-gray-600 rounded-lg"
+                    class="shadow-md shadow-gray-600 rounded-lg overflow-hidden flex flex-col bg-gray-900"
                     v-for="portfolio in portfolios"
                     :key="portfolio.id"
                 >
-                    <img
-                        :src="portfolio.src"
-                        class="rounded-md duration-200 hover:scale-105"
-                        alt=""
-                        rel="noreferrer"
-                    />
-                    <div class="flex items-center justify-center">
-                        <button
-                            class="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-                        >
+                    <div class="overflow-hidden">
+                        <img
+                            :src="portfolio.src"
+                            class="w-full duration-300 hover:scale-105"
+                            :alt="portfolio.name"
+                        />
+                    </div>
+                    <div class="flex flex-col flex-1 p-4">
+                        <h3 class="text-white font-semibold text-lg">{{ portfolio.name }}</h3>
+                        <p class="text-gray-400 text-sm mt-1 flex-1">{{ portfolio.description }}</p>
+                        <div class="flex gap-2 mt-4">
                             <a
                                 :href="portfolio.demo"
                                 target="_blank"
                                 rel="noreferrer"
-                                >Demo</a
-                            >
-                        </button>
-                        <button
-                            class="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-                        >
-                            <a :href="portfolio.code" target="_blank">Code</a>
-                        </button>
+                                class="flex-1 text-center px-4 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-medium hover:scale-105 duration-200"
+                            >Demo</a>
+                            <a
+                                :href="portfolio.code"
+                                target="_blank"
+                                rel="noreferrer"
+                                class="flex-1 text-center px-4 py-2 rounded-md border border-gray-600 text-gray-300 text-sm font-medium hover:border-cyan-400 hover:text-cyan-400 duration-200"
+                            >Code</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,45 +59,52 @@ import ematch from "../assets/portfolio/ematch.png";
 import ematchDashboard from "../assets/portfolio/ematchDashboard.png";
 import twitterClone from "../assets/portfolio/twitterClone.png";
 
-import 'aos/dist/aos.css'
-import AOS from 'aos'
-
-AOS.init()
-
 const portfolios = [
     {
         id: 1,
         src: ematch,
+        name: "E-Match",
+        description: "A full-stack matchmaking platform built with Vue.js and Node.js. Features user profiles, matching logic, and real-time interactions.",
         demo: "https://e-match.vercel.app/#/",
         code: "https://github.com/luibacli/e-match",
     },
     {
         id: 2,
         src: ematchDashboard,
+        name: "E-Match Dashboard",
+        description: "Admin dashboard for the E-Match platform. Built with Vue.js, featuring data visualization, user management, and analytics.",
         demo: "https://ematch-dashboard.vercel.app/",
         code: "https://github.com/luibacli/ematch-dashboard",
     },
     {
         id: 3,
         src: houseMarketplace,
+        name: "House Marketplace",
+        description: "A property listing app built with React and Firebase — supports authentication, real-time listings, and geolocation.",
         demo: "https://house-marketplace-reac-tw-firebase.vercel.app/",
         code: "https://github.com/luibacli/house-marketplace-REACTw-Firebase",
     },
     {
         id: 4,
         src: githubFinder,
+        name: "GitHub Finder",
+        description: "A React app that consumes the GitHub REST API to search users and display repositories, followers, and profile stats.",
         demo: "https://my-github-finder-react-js.vercel.app/",
         code: "https://github.com/luibacli/my-github-finder-React.js-",
     },
     {
         id: 5,
         src: twitterClone,
+        name: "Twitter Clone",
+        description: "A full-stack Twitter clone built with Nuxt.js and Prisma — features posts, follows, likes, and a relational database schema.",
         demo: "https://github.com/luibacli/twitter-clone-Nuxt-Prisma",
         code: "https://github.com/luibacli/twitter-clone-Nuxt-Prisma",
     },
     {
         id: 6,
         src: bankist,
+        name: "Bankist App",
+        description: "An interactive banking UI with login, transfers, loans, and account history — demonstrating DOM manipulation and JS logic.",
         demo: "https://bankist-app-pink.vercel.app/",
         code: "https://github.com/luibacli/bankist-app",
     },
