@@ -56,11 +56,11 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-shrink-0 fade-in-up" style="animation-delay:200ms">
+            <div class="flex-shrink-0 fade-in-up hero-float" style="animation-delay:200ms">
                 <img
                     :src="`${HeroImage1}`"
                     alt="Luigie Bacli"
-                    class="rounded-2xl mx-auto w-2/3 md:w-full sm:w-full hover:animate-wiggle animate-ease-in-out"
+                    class="rounded-2xl mx-auto w-2/3 md:w-full sm:w-full hero-img"
                 />
             </div>
         </div>
@@ -137,5 +137,22 @@ const scrollToSection = (sectionId) => {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Profile float ─────────────────────────────── */
+.hero-float {
+  animation: heroFloat 5s ease-in-out infinite;
+}
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+.hero-img {
+  transition: transform 300ms ease, filter 300ms ease;
+}
+.hero-img:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 22px rgba(6, 182, 212, 0.40));
 }
 </style>
