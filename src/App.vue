@@ -8,6 +8,7 @@ import Skills from "./components/Skills.vue";
 import Contact from "./components/Contact.vue";
 import LoadingBounce from "./components/LoadingBounce.vue";
 import SocialLinks from "./components/SocialLinks.vue";
+import { Analytics } from "@vercel/analytics/vue"
 import { onMounted, ref } from "vue";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -36,6 +37,7 @@ onMounted(() => {
             <LoadingBounce />
         </div>
         <div v-else>
+            <Analytics />
             <div v-show="showNavBar">
                 <NavBar />
             </div>

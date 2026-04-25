@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.1.4",
+    "@vercel/analytics": "^2.0.1",
     "aos": "^2.3.4",
     "three": "^0.184.0",
     "vanta": "^0.5.24",
