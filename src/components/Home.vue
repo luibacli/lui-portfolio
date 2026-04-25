@@ -56,11 +56,11 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-shrink-0 fade-in-up hero-float" style="animation-delay:200ms">
+            <div class="flex-shrink-0 fade-in-up hero-float flex justify-center" style="animation-delay:200ms">
                 <img
-                    :src="`${HeroImage1}`"
+                    :src="HeroImage1"
                     alt="Luigie Bacli"
-                    class="rounded-2xl mx-auto w-2/3 md:w-full sm:w-full hero-img"
+                    class="rounded-2xl w-44 sm:w-52 md:w-60 hero-img"
                 />
             </div>
         </div>
@@ -69,7 +69,7 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
-import HeroImage1 from '../assets/heroImage.png'
+import HeroImage1 from '../assets/heroImage.jpg'
 
 const vantaRef = ref(null)
 let vantaEffect = null
@@ -149,10 +149,11 @@ const scrollToSection = (sectionId) => {
 }
 
 .hero-img {
-  transition: transform 300ms ease, filter 300ms ease;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
 }
 .hero-img:hover {
-  transform: scale(1.04);
-  filter: drop-shadow(0 0 22px rgba(6, 182, 212, 0.40));
+  transform: scale(1.03);
+  box-shadow: 0 0 36px rgba(6, 182, 212, 0.30), 0 8px 32px rgba(0, 0, 0, 0.45);
 }
 </style>
