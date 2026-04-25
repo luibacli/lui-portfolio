@@ -17,9 +17,11 @@
                 <h1 class="name-shimmer text-5xl sm:text-7xl font-bold text-white fade-in-up" style="animation-delay:100ms">
                     Luigie Bacli
                 </h1>
-                <h2 class="text-2xl sm:text-4xl font-semibold text-gray-300 mt-2 fade-in-up" style="animation-delay:200ms">
-                    Full-Stack Developer
-                </h2>
+                <div class="overflow-hidden mt-2">
+                    <h2 class="marquee-text text-2xl sm:text-4xl font-semibold">
+                        Full-Stack Developer
+                    </h2>
+                </div>
                 <p class="text-gray-400 py-4 max-w-md text-lg leading-relaxed fade-in-up" style="animation-delay:320ms">
                     4 years building production-grade web apps with Vue.js, Node.js, and REST APIs — from pixel-perfect UIs to scalable back-end systems.
                 </p>
@@ -128,6 +130,20 @@ const scrollToSection = (sectionId) => {
 @keyframes shimmerSweep {
   from { transform: translateX(-200%); }
   to   { transform: translateX(380%); }
+}
+
+/* ── Marquee title (one-shot, right → position) ── */
+.marquee-text {
+  display: inline-block;
+  background: linear-gradient(90deg, #22d3ee 0%, #3b82f6 60%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: marqueeReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) 600ms both;
+}
+@keyframes marqueeReveal {
+  from { transform: translateX(200%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
 }
 
 /* ── Hero stagger ─────────────────────────────── */
