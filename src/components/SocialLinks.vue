@@ -50,7 +50,7 @@ const links = [
         id: 4,
         name: "Resume",
         icon: DocumentArrowDownIcon,
-        href: "/resume.pdf",
+        href: "/lui_bacli.pdf",
         style: "rounded-br-md",
         download: "resume",
     },
