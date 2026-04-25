@@ -23,7 +23,7 @@
                     </h2>
                 </div>
                 <p class="text-gray-400 py-4 max-w-md text-lg leading-relaxed fade-in-up" style="animation-delay:320ms">
-                    4 years building production-grade web apps with Vue.js, Node.js, and REST APIs — from pixel-perfect UIs to scalable back-end systems.
+                    I build web applications that help businesses operate better — reliable systems real teams depend on daily. With 4+ years shipping live products for real clients, I own the full stack and focus on outcomes, not just outputs.
                 </p>
                 <p class="text-gray-500 text-sm mb-2 fade-in-up" style="animation-delay:380ms">
                     📍 Cebu, PH &nbsp;·&nbsp; UTC+8 &nbsp;·&nbsp;

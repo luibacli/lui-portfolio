@@ -24,27 +24,36 @@
                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
             </svg>
         </button>
+    </div>
 
+    <!-- Teleported outside NavBar so fixed positioning covers the full viewport -->
+    <Teleport to="body">
         <Transition name="drawer">
             <div
                 v-if="showNav"
-                class="fixed inset-0 z-50 md:hidden"
+                class="fixed inset-0 md:hidden"
+                style="z-index: 9999;"
             >
                 <!-- Backdrop -->
                 <div
-                    class="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                    class="absolute inset-0 bg-black/70"
                     @click="showNav = false"
                 ></div>
 
-                <!-- Drawer panel -->
-                <div class="drawer-panel absolute left-0 top-0 h-full w-72 max-w-[85vw] bg-gray-950 border-r border-gray-800 flex flex-col shadow-2xl shadow-black/60">
-
+                <!-- Drawer panel — solid background guaranteed via inline style -->
+                <div
+                    class="drawer-panel absolute left-0 top-0 h-full w-72 max-w-[85vw] flex flex-col border-r border-gray-700 shadow-2xl shadow-black"
+                    style="background-color: #0d1117;"
+                >
                     <!-- Header -->
-                    <div class="flex items-center justify-between px-5 h-20 border-b border-gray-800 flex-shrink-0">
+                    <div
+                        class="flex items-center justify-between px-5 h-20 flex-shrink-0 border-b border-gray-700/80"
+                        style="background-color: #0d1117;"
+                    >
                         <h1 class="text-2xl font-signature text-white select-none">Luigie Bacli</h1>
                         <button
                             @click="showNav = false"
-                            class="text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800 transition duration-150"
+                            class="text-gray-400 hover:text-white p-2 rounded-lg hover:bg-white/10 transition duration-150"
                             aria-label="Close menu"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -60,26 +69,26 @@
                             v-for="link in links"
                             :key="link.id"
                             @click="scrollToSectionMenu(link.link)"
-                            class="text-left w-full px-4 py-3 rounded-lg text-white font-medium capitalize transition duration-150 hover:bg-gray-800 hover:text-cyan-400 text-base"
+                            class="text-left w-full px-4 py-3 rounded-lg font-medium capitalize transition duration-150 text-base text-white hover:bg-white/10 hover:text-cyan-400"
                         >{{ link.link }}</button>
                     </nav>
 
                     <!-- Social links -->
-                    <div class="px-5 pb-8 pt-4 border-t border-gray-800">
-                        <p class="text-xs text-gray-600 uppercase tracking-widest mb-3">Connect</p>
+                    <div class="px-5 pb-8 pt-4 border-t border-gray-700/80">
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mb-3">Connect</p>
                         <div class="flex flex-col gap-2">
                             <a href="https://www.linkedin.com/in/lui-bacli-953166223/" target="_blank" rel="noreferrer"
-                                class="text-sm text-gray-400 hover:text-cyan-400 transition duration-150">LinkedIn</a>
+                                class="text-sm text-gray-300 hover:text-cyan-400 transition duration-150">LinkedIn</a>
                             <a href="https://github.com/luibacli" target="_blank" rel="noreferrer"
-                                class="text-sm text-gray-400 hover:text-cyan-400 transition duration-150">GitHub</a>
+                                class="text-sm text-gray-300 hover:text-cyan-400 transition duration-150">GitHub</a>
                             <a href="mailto:luibacli@gmail.com"
-                                class="text-sm text-gray-400 hover:text-cyan-400 transition duration-150">Email</a>
+                                class="text-sm text-gray-300 hover:text-cyan-400 transition duration-150">Email</a>
                         </div>
                     </div>
                 </div>
             </div>
         </Transition>
-    </div>
+    </Teleport>
 </template>
 
 <script setup>
@@ -110,7 +119,7 @@ const scrollToSectionMenu = (sectionId) => {
 </script>
 
 <style scoped>
-/* Backdrop fades */
+/* Backdrop fades in/out */
 .drawer-enter-active,
 .drawer-leave-active {
     transition: opacity 220ms ease;
@@ -123,7 +132,7 @@ const scrollToSectionMenu = (sectionId) => {
 /* Drawer panel slides in from left */
 .drawer-enter-active .drawer-panel,
 .drawer-leave-active .drawer-panel {
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 260ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .drawer-enter-from .drawer-panel,
 .drawer-leave-to .drawer-panel {
